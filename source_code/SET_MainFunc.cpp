@@ -1,7 +1,8 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-#include "d:/git/git_multi-thread/source_code/Coarse-Grained_Synchronization.h"
+#include "coarse-grained_synchronization.h"
+//#include "fine-grained_synchronization.h"
 
 typedef CGList List;
 

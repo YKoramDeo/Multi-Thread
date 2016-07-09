@@ -19,10 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Coarse-Grained_Synchronization.h" />
+    <ClInclude Include="..\source_code\coarse-grained_synchronization.h" />
+    <ClInclude Include="..\source_code\fine-grained_synchronization.h" />
+    <ClInclude Include="optimistic_synchronization.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\source_code\SET_MainFunc.cpp" />
+    <ClCompile Include="..\source_code\SET_MainFunc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{27A64204-9499-4E3C-B503-823E07B186C2}</ProjectGuid>
