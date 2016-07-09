@@ -23,7 +23,7 @@ public:
 		this->data.id = data.id;
 	}
 
-	CGNode() { }
+	~CGNode() { }
 };
 
 class CGList
