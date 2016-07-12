@@ -1,10 +1,10 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-#include "coarse-grained_synchronization.h"
+//#include "coarse-grained_synchronization.h"
 //#include "fine-grained_synchronization.h"
-
-typedef CGList List;
+#include "lazy_synchronization.h"
+typedef ZList List;
 
 const int NUM_TEST = 4000000;
 const int KEY_RANGE = 1000;
@@ -31,6 +31,9 @@ void ThreadFunc(int num_thread)
 
 int main(int argc, char *argv[]) {
 	std::vector<std::thread*> threads;
+	
+	free_list = new ZNode(0x7fffffff);
+	
 	for (int num_thread = 1; num_thread <= 16; num_thread = num_thread * 2)
 	{
 		gList.Initailize();
@@ -53,6 +56,12 @@ int main(int argc, char *argv[]) {
 		std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(d).count() << " msecs" << std::endl;
 
 		threads.clear();
+		while (nullptr != free_list->next)
+		{
+			ZNode *temp = free_list;
+			free_list = free_list->next;
+			delete temp;
+		}
 	}
 
 	return 0;

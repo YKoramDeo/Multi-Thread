@@ -21,7 +21,10 @@
     <ClInclude Include="..\source_code\fine-grained_synchronization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="optimistic_synchronization.h">
+    <ClInclude Include="..\source_code\optimistic_synchronization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source_code\lazy_synchronization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
