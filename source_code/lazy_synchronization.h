@@ -57,7 +57,7 @@ public:
 	}
 	~ZList() { }
 
-	void Initailize()
+	void Initialize()
 	{
 		ZNode* ptr;
 		while (mHead.next != &mTail) {

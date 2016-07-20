@@ -36,7 +36,7 @@ public:
 	}
 	~CGList() { }
 
-	void Initailize()
+	void Initialize()
 	{
 		CGNode* ptr;
 		while (mHead.next != &mTail) {

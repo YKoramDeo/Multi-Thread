@@ -52,7 +52,7 @@ public:
 	}
 	~FGList() { }
 
-	void Initailize()
+	void Initialize()
 	{
 		FGNode* ptr;
 		while (mHead.next != &mTail) {

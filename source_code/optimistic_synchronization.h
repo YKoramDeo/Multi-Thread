@@ -51,7 +51,7 @@ public:
 	}
 	~OList() { }
 
-	void Initailize()
+	void Initialize()
 	{
 		ONode* ptr;
 		while (mHead.next != &mTail) {
