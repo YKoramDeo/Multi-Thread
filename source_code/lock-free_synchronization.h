@@ -15,16 +15,19 @@ class LFNode
 public:
 	Data data;
 	int next;
+	int addr;
 
-	LFNode() { next = 0; }
+	LFNode() { next = 0; addr = reinterpret_cast<int>(this); }
 	LFNode(int value) {
 		next = 0;
 		data.id = value;
+		addr = reinterpret_cast<int>(this);
 	}
 
 	LFNode(Data data) {
 		next = 0;
 		this->data.id = data.id;
+		addr = reinterpret_cast<int>(this);
 	}
 
 	~LFNode() { }
@@ -93,6 +96,8 @@ public:
 	void Initialize()
 	{
 		LFNode *ptr;
+		LFNode *temp_head = mHead.GetNext();
+		LFNode *temp_tail = &mTail;
 		while (mHead.GetNext() != &mTail) {
 			ptr = mHead.GetNext();
 			mHead.SetNext(ptr->GetNext());

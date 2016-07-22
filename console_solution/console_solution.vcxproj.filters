@@ -27,7 +27,7 @@
     <ClInclude Include="..\source_code\lazy_synchronization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lock-free_synchronization.h">
+    <ClInclude Include="..\source_code\lock-free_synchronization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,10 @@
     <ClCompile Include="..\source_code\SET_MainFunc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="testMain.cpp">
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source_code\SET_testMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

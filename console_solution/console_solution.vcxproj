@@ -22,17 +22,18 @@
     <ClInclude Include="..\source_code\coarse-grained_synchronization.h" />
     <ClInclude Include="..\source_code\fine-grained_synchronization.h" />
     <ClInclude Include="..\source_code\lazy_synchronization.h" />
+    <ClInclude Include="..\source_code\lock-free_synchronization.h" />
     <ClInclude Include="..\source_code\optimistic_synchronization.h" />
-    <ClInclude Include="lock-free_synchronization.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source_code\SET_MainFunc.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="testMain.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    <ClCompile Include="..\source_code\SET_testMain.cpp" />
+    <ClCompile Include="Source.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
